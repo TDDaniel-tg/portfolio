@@ -477,7 +477,7 @@ function initPageTransition() {
     overlay.innerHTML = `
         <div style="text-align: center;">
             <div style="font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: #00d4ff; margin-bottom: 1rem;">
-                ⚡ AI Dev Studio
+                AI Dev Studio
             </div>
             <div style="width: 200px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
                 <div class="loading-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, #00d4ff, #8b5cf6); transition: width 0.3s ease;"></div>

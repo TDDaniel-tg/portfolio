@@ -1,0 +1,95 @@
+/* Минималистичные SVG иконки */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: all 0.3s ease;
+}
+
+.icon--large {
+    width: 48px;
+    height: 48px;
+}
+
+.icon--medium {
+    width: 32px;
+    height: 32px;
+}
+
+.icon--small {
+    width: 20px;
+    height: 20px;
+}
+
+/* Специфичные стили для разделов */
+.logo-icon .icon {
+    width: 28px;
+    height: 28px;
+    fill: var(--primary-color);
+}
+
+.advantage-card__icon .icon {
+    width: 48px;
+    height: 48px;
+    fill: var(--primary-color);
+}
+
+.tech-item__icon .icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--accent-color);
+}
+
+.contact-item__icon .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}
+
+.stat__number .icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--primary-color);
+}
+
+/* Hover эффекты */
+.advantage-card:hover .icon {
+    fill: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.tech-item:hover .icon {
+    fill: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.contact-item:hover .icon {
+    fill: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Анимации */
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.icon--animated {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .advantage-card__icon .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .tech-item__icon .icon {
+        width: 28px;
+        height: 28px;
+    }
+} 

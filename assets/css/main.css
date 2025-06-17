@@ -479,8 +479,9 @@ p {
 
 .about__advantages {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
 .advantage-card {
@@ -493,6 +494,14 @@ p {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 200px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .advantage-card::before {
@@ -521,16 +530,35 @@ p {
     font-size: 3rem;
     margin-bottom: 1rem;
     filter: drop-shadow(0 0 10px var(--accent-primary));
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .advantage-card__title {
     color: var(--text-primary);
     margin-bottom: 1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    text-align: center;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .advantage-card__text {
     color: var(--text-secondary);
     line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: center;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .about__team {
@@ -1214,4 +1242,52 @@ p {
 .fade-in {
     opacity: 1;
     visibility: visible;
+}
+
+/* Дополнительные правила для предотвращения переполнения */
+.advantage-card * {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.advantage-card__title,
+.advantage-card__text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Улучшения для адаптивности */
+@media (max-width: 320px) {
+    .advantage-card {
+        padding: 1rem;
+        min-height: 140px;
+    }
+    
+    .advantage-card__title {
+        font-size: 1rem !important;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+    
+    .advantage-card__text {
+        font-size: 0.8rem !important;
+        line-height: 1.3;
+    }
+    
+    .about__advantages {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Дополнительные медиа-запросы для лучшей адаптивности */
+@media (max-width: 400px) {
+    .advantage-card__title {
+        font-size: 1.05rem !important;
+    }
+    
+    .advantage-card__text {
+        font-size: 0.85rem !important;
+    }
 } 

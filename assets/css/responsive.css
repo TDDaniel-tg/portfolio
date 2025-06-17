@@ -96,6 +96,19 @@
     
     .advantage-card {
         padding: 1.5rem;
+        min-height: 180px;
+        word-break: break-word;
+    }
+    
+    .advantage-card__title {
+        font-size: 1.2rem;
+        line-height: 1.3;
+        margin-bottom: 0.8rem;
+    }
+    
+    .advantage-card__text {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .about__team {
@@ -228,6 +241,25 @@
     .testimonial-card,
     .team-card {
         padding: 1.25rem;
+    }
+    
+    .advantage-card {
+        min-height: 160px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .advantage-card__title {
+        font-size: 1.1rem !important;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        word-break: break-word;
+    }
+    
+    .advantage-card__text {
+        font-size: 0.85rem !important;
+        line-height: 1.4;
+        word-break: break-word;
     }
     
     .advantage-card__icon,
