@@ -26,7 +26,7 @@ ai-dev-studio/
 │   ├── js/
 │   │   ├── main.js         # Основной функционал
 │   │   ├── animations.js   # GSAP анимации
-│   │   └── form.js         # Обработка форм
+│   │   └── form.js         # Обработка формasdasdasd
 │   └── images/
 │       ├── portfolio/      # Изображения портфолио
 │       ├── team/           # Фото команды
@@ -383,5 +383,6 @@ vercel --prod
 
 ---
 
-**Создано с ❤️ командой AI Dev Studio** #   p o r t f o l i o  
+**Создано с ❤️ командой AI Dev Studio** #   p o r t f o l i o 
+ 
  

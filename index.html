@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dev Studio - Создаем сайты за 4 часа с ИИ | Премиум веб-разработка</title>
+    <meta name="description" content="AI Dev Studio - команда профессионалов создает премиум сайты за 4 часа. Быстро, качественно, с искусственным интеллектом. От 21,000₽">
+    <meta name="keywords" content="создание сайтов, веб-разработка, AI, искусственный интеллект, лендинг, интернет-магазин">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Dev Studio - Создаем сайты за 4 часа с ИИ">
+    <meta property="og:description" content="Премиум веб-разработка с искусственным интеллектом. Быстро, качественно, профессионально.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aidevstudio.ru">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="logo-animation">
+                <div class="logo-text">AI Dev Studio</div>
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI Dev Studio</span>
+            </div>
+            
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">О нас</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#services" class="nav__link">Услуги</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">Портфолио</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <a href="#contact" class="btn btn--primary">Заказать за 4 часа</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__background">
+            <div class="particles" id="particles"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        
+        <div class="hero__content container">
+            <div class="hero__text">
+                <h1 class="hero__title">
+                    <span class="typewriter" data-text="Создаем сайты за 4 часа с ИИ"></span>
+                </h1>
+                <p class="hero__subtitle">
+                    Команда AI Dev Studio - быстро, качественно, без ожидания месяцами
+                </p>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">2.5</span>
+                        <span class="stat__label">года опыта</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">50+</span>
+                        <span class="stat__label">проектов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">⚡</span>
+                        <span class="stat__label">работаем с ИИ</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__cta">
+                <a href="#contact" class="btn btn--hero">
+                    <span>Заказать сайт за 21,000₽</span>
+                    <div class="btn__glow"></div>
+                </a>
+                <a href="#contact" class="btn btn--secondary">Бесплатная консультация</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают AI Dev Studio?</h2>
+                <p class="section-subtitle">Мы делаем то, что другие не могут - быстро и качественно</p>
+            </div>
+            
+            <div class="about__grid">
+                <div class="about__advantages">
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">⚡</div>
+                        <h3 class="advantage-card__title">Скорость</h3>
+                        <p class="advantage-card__text">Сайт за 4-12 часов вместо месяцев ожидания</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">🤖</div>
+                        <h3 class="advantage-card__title">ИИ в работе</h3>
+                        <p class="advantage-card__text">Используем нейросети для ускорения разработки</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">🎨</div>
+                        <h3 class="advantage-card__title">Дизайн + код</h3>
+                        <p class="advantage-card__text">Создаем дизайн и разрабатываем одновременно</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">💎</div>
+                        <h3 class="advantage-card__title">Премиум качество</h3>
+                        <p class="advantage-card__text">Внимание к каждой детали и пикселю</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">🛠️</div>
+                        <h3 class="advantage-card__title">Полный цикл</h3>
+                        <p class="advantage-card__text">От идеи до запуска - все включено</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-card__icon">🔄</div>
+                        <h3 class="advantage-card__title">Участие клиента</h3>
+                        <p class="advantage-card__text">Редактируете в реальном времени</p>
+                    </div>
+                </div>
+                
+                <div class="about__team">
+                    <div class="team-card">
+                        <div class="team-card__photo">
+                            <img src="assets/images/team/daniel.jpg" alt="Ташматов Даниэль">
+                        </div>
+                        <h4 class="team-card__name">Ташматов Даниэль</h4>
+                        <p class="team-card__role">Lead Developer & Designer</p>
+                        <p class="team-card__description">2.5 года в веб-разработке, специализируется на создании современных интерфейсов</p>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-card__photo">
+                            <img src="assets/images/team/nikita.jpg" alt="Ундуск Никита">
+                        </div>
+                        <h4 class="team-card__name">Ундуск Никита</h4>
+                        <p class="team-card__role">Full-stack Developer</p>
+                        <p class="team-card__description">Эксперт по backend-разработке и интеграциям с внешними сервисами</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Услуги и тарифы</h2>
+                <p class="section-subtitle">Прозрачные цены без скрытых платежей</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__header">
+                        <h3 class="service-card__title">Экспресс</h3>
+                        <div class="service-card__time">4 часа</div>
+                        <div class="service-card__price">21,000₽</div>
+                    </div>
+                    <ul class="service-card__features">
+                        <li>Лендинг/визитка</li>
+                        <li>Адаптивный дизайн</li>
+                        <li>Базовый функционал</li>
+                        <li>Помощь с доменом и хостингом</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--service">Заказать</a>
+                </div>
+                
+                <div class="service-card service-card--popular">
+                    <div class="service-card__badge">Популярно</div>
+                    <div class="service-card__header">
+                        <h3 class="service-card__title">Стандарт</h3>
+                        <div class="service-card__time">8 часов</div>
+                        <div class="service-card__price">42,000₽</div>
+                    </div>
+                    <ul class="service-card__features">
+                        <li>Корпоративный сайт</li>
+                        <li>Расширенный функционал</li>
+                        <li>SEO-оптимизация</li>
+                        <li>Формы обратной связи</li>
+                        <li>Интеграция с CRM</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--service btn--primary">Заказать</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__header">
+                        <h3 class="service-card__title">Премиум</h3>
+                        <div class="service-card__time">12 часов</div>
+                        <div class="service-card__price">65,000₽</div>
+                    </div>
+                    <ul class="service-card__features">
+                        <li>Сложный функционал</li>
+                        <li>Интеграции с API</li>
+                        <li>Анимации и эффекты</li>
+                        <li>Панель администратора</li>
+                        <li>Техподдержка 3 месяца</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--service">Заказать</a>
+                </div>
+            </div>
+            
+            <div class="services__additional">
+                <h3 class="services__additional-title">Дополнительные услуги</h3>
+                <div class="additional-services">
+                    <div class="additional-service">
+                        <span class="additional-service__name">Интернет-магазины</span>
+                        <span class="additional-service__price">от 85,000₽</span>
+                    </div>
+                    <div class="additional-service">
+                        <span class="additional-service__name">Мобильные приложения</span>
+                        <span class="additional-service__price">от 120,000₽</span>
+                    </div>
+                    <div class="additional-service">
+                        <span class="additional-service__name">Чат-боты простые</span>
+                        <span class="additional-service__price">от 15,000₽</span>
+                    </div>
+                    <div class="additional-service">
+                        <span class="additional-service__name">Чат-боты сложные</span>
+                        <span class="additional-service__price">от 45,000₽</span>
+                    </div>
+                    <div class="additional-service">
+                        <span class="additional-service__name">Поддержка</span>
+                        <span class="additional-service__price">5,000₽/месяц</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Портфолио</h2>
+                <p class="section-subtitle">Примеры наших работ с реальными результатами</p>
+            </div>
+            
+            <div class="portfolio__filters">
+                <button class="filter-btn filter-btn--active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="landing">Лендинги</button>
+                <button class="filter-btn" data-filter="corporate">Корпоративные</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            </div>
+            
+            <div class="portfolio__grid">
+                <div class="portfolio-item" data-category="landing">
+                    <div class="portfolio-item__image">
+                        <img src="assets/images/portfolio/project1.jpg" alt="Лендинг для IT компании">
+                        <div class="portfolio-item__overlay">
+                            <h4 class="portfolio-item__title">IT Консалтинг</h4>
+                            <p class="portfolio-item__description">Лендинг для IT компании с анимациями</p>
+                            <div class="portfolio-item__actions">
+                                <button class="btn btn--small btn--outline">Подробнее</button>
+                                <a href="#" class="btn btn--small btn--primary">Сайт</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="corporate">
+                    <div class="portfolio-item__image">
+                        <img src="assets/images/portfolio/project2.jpg" alt="Корпоративный сайт">
+                        <div class="portfolio-item__overlay">
+                            <h4 class="portfolio-item__title">Строительная компания</h4>
+                            <p class="portfolio-item__description">Корпоративный сайт с каталогом услуг</p>
+                            <div class="portfolio-item__actions">
+                                <button class="btn btn--small btn--outline">Подробнее</button>
+                                <a href="#" class="btn btn--small btn--primary">Сайт</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item__image">
+                        <img src="assets/images/portfolio/project3.jpg" alt="Интернет-магазин">
+                        <div class="portfolio-item__overlay">
+                            <h4 class="portfolio-item__title">Интернет-магазин</h4>
+                            <p class="portfolio-item__description">E-commerce с интеграцией платежей</p>
+                            <div class="portfolio-item__actions">
+                                <button class="btn btn--small btn--outline">Подробнее</button>
+                                <a href="#" class="btn btn--small btn--primary">Сайт</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="landing">
+                    <div class="portfolio-item__image">
+                        <img src="assets/images/portfolio/project4.jpg" alt="Лендинг салона красоты">
+                        <div class="portfolio-item__overlay">
+                            <h4 class="portfolio-item__title">Салон красоты</h4>
+                            <p class="portfolio-item__description">Лендинг с онлайн записью</p>
+                            <div class="portfolio-item__actions">
+                                <button class="btn btn--small btn--outline">Подробнее</button>
+                                <a href="#" class="btn btn--small btn--primary">Сайт</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Работаем с любыми технологиями + ИИ</h2>
+                <p class="section-subtitle">Не ограничиваемся стандартными решениями</p>
+            </div>
+            
+            <div class="technologies__grid">
+                <div class="tech-item">
+                    <div class="tech-item__icon">⚛️</div>
+                    <span class="tech-item__name">React</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">💚</div>
+                    <span class="tech-item__name">Vue.js</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🟢</div>
+                    <span class="tech-item__name">Node.js</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🐍</div>
+                    <span class="tech-item__name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">📝</div>
+                    <span class="tech-item__name">WordPress</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🎨</div>
+                    <span class="tech-item__name">Figma</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🤖</div>
+                    <span class="tech-item__name">ChatGPT</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🧠</div>
+                    <span class="tech-item__name">Claude</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-item__icon">🎭</div>
+                    <span class="tech-item__name">Midjourney</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <p class="section-subtitle">Что говорят о нашей работе</p>
+            </div>
+            
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p class="testimonial-card__text">"Сделали сайт за 6 часов! Обычно ждал месяцами у других. Качество на высоте, все как договаривались."</p>
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="assets/images/testimonials/client1.jpg" alt="Алексей М.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4 class="testimonial-card__name">Алексей М.</h4>
+                            <p class="testimonial-card__position">Владелец магазина</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p class="testimonial-card__text">"Качество как у дорогих студий, но в 3 раза быстрее. Сайт получился именно таким, как я представляла."</p>
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="assets/images/testimonials/client2.jpg" alt="Мария К.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4 class="testimonial-card__name">Мария К.</h4>
+                            <p class="testimonial-card__position">Основатель стартапа</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p class="testimonial-card__text">"Процесс полностью прозрачный, могла корректировать все на лету. Ребята действительно профессионалы!"</p>
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="assets/images/testimonials/client3.jpg" alt="Елена В.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4 class="testimonial-card__name">Елена В.</h4>
+                            <p class="testimonial-card__position">Фрилансер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Готовы начать проект?</h2>
+                <p class="section-subtitle">Оставьте заявку и получите сайт уже сегодня</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__form-wrapper">
+                    <form class="contact__form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Услуга</label>
+                            <select id="service" name="service" required>
+                                <option value="">Выберите услугу</option>
+                                <option value="express">Экспресс - 21,000₽</option>
+                                <option value="standard">Стандарт - 42,000₽</option>
+                                <option value="premium">Премиум - 65,000₽</option>
+                                <option value="ecommerce">Интернет-магазин - от 85,000₽</option>
+                                <option value="consultation">Бесплатная консультация</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Описание проекта</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">Согласен на обработку персональных данных</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span>Заказать и оплатить</span>
+                            <div class="btn__glow"></div>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact__info">
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📞</div>
+                        <div class="contact-item__content">
+                            <h4>Телефон</h4>
+                            <a href="tel:+996500441234">+996 500 44 1234</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item__icon">✈️</div>
+                        <div class="contact-item__content">
+                            <h4>Telegram</h4>
+                            <a href="https://t.me/TDDan">@TDDan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📧</div>
+                        <div class="contact-item__content">
+                            <h4>Email</h4>
+                            <a href="mailto:tddanieltg@gmail.com">tddanieltg@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__schedule">
+                        <h4>Режим работы</h4>
+                        <p>9:00 - 21:00 МСК</p>
+                        <p>Ответим в течение 15 минут</p>
+                    </div>
+                    
+                    <div class="contact__guarantee">
+                        <h4>Гарантия</h4>
+                        <p>Переделаем бесплатно, если не понравится</p>
+                        <p>Свободно только 3 слота на эту неделю</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">AI Dev Studio</span>
+                    <p class="footer__slogan">Быстро. Качественно. С искусственным интеллектом.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Услуги</h4>
+                        <a href="#services">Создание сайтов</a>
+                        <a href="#services">Интернет-магазины</a>
+                        <a href="#services">Мобильные приложения</a>
+                        <a href="#services">Чат-боты</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Компания</h4>
+                        <a href="#about">О нас</a>
+                        <a href="#portfolio">Портфолио</a>
+                        <a href="#technologies">Технологии</a>
+                        <a href="#contact">Контакты</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Контакты</h4>
+                        <a href="tel:+996500441234">+996 500 44 1234</a>
+                        <a href="https://t.me/TDDan">@TDDan</a>
+                        <a href="mailto:tddanieltg@gmail.com">tddanieltg@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 AI Dev Studio. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA (Mobile) -->
+    <div class="floating-cta" id="floating-cta">
+        <a href="#contact" class="btn btn--primary">Заказать</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/form.js"></script>
+</body>
+</html>
