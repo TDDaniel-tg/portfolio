@@ -191,45 +191,45 @@ function initParticles() {
     // Continuously create new particles
     setInterval(createParticle, 500);
     
-    // Mouse interaction
-    let mouseX = 0;
-    let mouseY = 0;
+    // Mouse interaction disabled
+    // let mouseX = 0;
+    // let mouseY = 0;
     
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    // document.addEventListener('mousemove', (e) => {
+    //     mouseX = e.clientX;
+    //     mouseY = e.clientY;
         
-        // Create particle at mouse position occasionally
-        if (Math.random() < 0.1) {
-            createMouseParticle(mouseX, mouseY);
-        }
-    });
+    //     // Create particle at mouse position occasionally
+    //     if (Math.random() < 0.1) {
+    //         createMouseParticle(mouseX, mouseY);
+    //     }
+    // });
     
-    function createMouseParticle(x, y) {
-        const particle = document.createElement('div');
-        particle.className = 'mouse-particle';
+    // function createMouseParticle(x, y) {
+    //     const particle = document.createElement('div');
+    //     particle.className = 'mouse-particle';
         
-        particle.style.cssText = `
-            position: fixed;
-            left: ${x}px;
-            top: ${y}px;
-            width: 4px;
-            height: 4px;
-            background: #00d4ff;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 999;
-            animation: fadeOut 1s ease-out forwards;
-        `;
+    //     particle.style.cssText = `
+    //         position: fixed;
+    //         left: ${x}px;
+    //         top: ${y}px;
+    //         width: 4px;
+    //         height: 4px;
+    //         background: #00d4ff;
+    //         border-radius: 50%;
+    //         pointer-events: none;
+    //         z-index: 999;
+    //         animation: fadeOut 1s ease-out forwards;
+    //     `;
         
-        document.body.appendChild(particle);
+    //     document.body.appendChild(particle);
         
-        setTimeout(() => {
-            if (particle.parentNode) {
-                particle.parentNode.removeChild(particle);
-            }
-        }, 1000);
-    }
+    //     setTimeout(() => {
+    //         if (particle.parentNode) {
+    //             particle.parentNode.removeChild(particle);
+    //         }
+    //     }, 1000);
+    // }
 }
 
 // Scroll Effects

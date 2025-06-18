@@ -73,28 +73,28 @@ function initHeroAnimations() {
         ease: 'none'
     });
     
-    // Mouse parallax for hero background
-    let mouseX = 0;
-    let mouseY = 0;
+    // Mouse parallax for hero background - DISABLED
+    // let mouseX = 0;
+    // let mouseY = 0;
     
-    document.addEventListener('mousemove', (e) => {
-        mouseX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
-        mouseY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
+    // document.addEventListener('mousemove', (e) => {
+    //     mouseX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
+    //     mouseY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
         
-        gsap.to('.orb-1', {
-            x: mouseX * 50,
-            y: mouseY * 50,
-            duration: 2,
-            ease: 'power2.out'
-        });
+    //     gsap.to('.orb-1', {
+    //         x: mouseX * 50,
+    //         y: mouseY * 50,
+    //         duration: 2,
+    //         ease: 'power2.out'
+    //     });
         
-        gsap.to('.orb-2', {
-            x: mouseX * -30,
-            y: mouseY * -30,
-            duration: 2,
-            ease: 'power2.out'
-        });
-    });
+    //     gsap.to('.orb-2', {
+    //         x: mouseX * -30,
+    //         y: mouseY * -30,
+    //         duration: 2,
+    //         ease: 'power2.out'
+    //     });
+    // });
 }
 
 // Section Reveal Animations
@@ -322,29 +322,31 @@ function initParallaxEffects() {
 
 // Magnetic Buttons
 function initMagneticButtons() {
-    gsap.utils.toArray('.btn--primary, .btn--hero').forEach(button => {
-        let xTo = gsap.quickTo(button, 'x', { duration: 0.6, ease: 'power3' });
-        let yTo = gsap.quickTo(button, 'y', { duration: 0.6, ease: 'power3' });
+    return; // Disabled - no magnetic effect
+    
+    // gsap.utils.toArray('.btn--primary, .btn--hero').forEach(button => {
+    //     let xTo = gsap.quickTo(button, 'x', { duration: 0.6, ease: 'power3' });
+    //     let yTo = gsap.quickTo(button, 'y', { duration: 0.6, ease: 'power3' });
         
-        button.addEventListener('mouseenter', () => {
-            gsap.to(button, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
-        });
+    //     button.addEventListener('mouseenter', () => {
+    //         gsap.to(button, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+    //     });
         
-        button.addEventListener('mouseleave', () => {
-            gsap.to(button, { scale: 1, duration: 0.3, ease: 'power2.out' });
-            xTo(0);
-            yTo(0);
-        });
+    //     button.addEventListener('mouseleave', () => {
+    //         gsap.to(button, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    //         xTo(0);
+    //         yTo(0);
+    //     });
         
-        button.addEventListener('mousemove', (e) => {
-            const rect = button.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+    //     button.addEventListener('mousemove', (e) => {
+    //         const rect = button.getBoundingClientRect();
+    //         const x = e.clientX - rect.left - rect.width / 2;
+    //         const y = e.clientY - rect.top - rect.height / 2;
             
-            xTo(x * 0.3);
-            yTo(y * 0.3);
-        });
-    });
+    //         xTo(x * 0.3);
+    //         yTo(y * 0.3);
+    //     });
+    // });
 }
 
 // Text Reveal Animations
@@ -402,56 +404,58 @@ function initLogoAnimation() {
     });
 }
 
-// Cursor Trail Effect
+// Cursor Trail Effect - DISABLED
 function initCursorTrail() {
-    if (window.innerWidth < 768) return; // Skip on mobile
+    return; // Disabled - no cursor trail
     
-    const trail = [];
-    const trailLength = 10;
+    // if (window.innerWidth < 768) return; // Skip on mobile
     
-    for (let i = 0; i < trailLength; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'cursor-dot';
-        dot.style.cssText = `
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background: rgba(0, 212, 255, ${1 - i / trailLength});
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-        `;
-        document.body.appendChild(dot);
-        trail.push(dot);
-    }
+    // const trail = [];
+    // const trailLength = 10;
     
-    let mouseX = 0;
-    let mouseY = 0;
+    // for (let i = 0; i < trailLength; i++) {
+    //     const dot = document.createElement('div');
+    //     dot.className = 'cursor-dot';
+    //     dot.style.cssText = `
+    //         position: fixed;
+    //         width: 4px;
+    //         height: 4px;
+    //         background: rgba(0, 212, 255, ${1 - i / trailLength});
+    //         border-radius: 50%;
+    //         pointer-events: none;
+    //         z-index: 9999;
+    //         mix-blend-mode: difference;
+    //     `;
+    //     document.body.appendChild(dot);
+    //     trail.push(dot);
+    // }
     
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
+    // let mouseX = 0;
+    // let mouseY = 0;
     
-    function animateTrail() {
-        let x = mouseX;
-        let y = mouseY;
+    // document.addEventListener('mousemove', (e) => {
+    //     mouseX = e.clientX;
+    //     mouseY = e.clientY;
+    // });
+    
+    // function animateTrail() {
+    //     let x = mouseX;
+    //     let y = mouseY;
         
-        trail.forEach((dot, index) => {
-            const nextDot = trail[index + 1] || trail[0];
+    //     trail.forEach((dot, index) => {
+    //         const nextDot = trail[index + 1] || trail[0];
             
-            dot.style.left = x + 'px';
-            dot.style.top = y + 'px';
+    //         dot.style.left = x + 'px';
+    //         dot.style.top = y + 'px';
             
-            x += (nextDot.offsetLeft - x) * 0.3;
-            y += (nextDot.offsetTop - y) * 0.3;
-        });
+    //         x += (nextDot.offsetLeft - x) * 0.3;
+    //         y += (nextDot.offsetTop - y) * 0.3;
+    //     });
         
-        requestAnimationFrame(animateTrail);
-    }
+    //     requestAnimationFrame(animateTrail);
+    // }
     
-    animateTrail();
+    // animateTrail();
 }
 
 // Page Transition Animation

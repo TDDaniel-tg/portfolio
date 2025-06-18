@@ -1,4 +1,4 @@
-/* Минималистичные SVG иконки */
+/* Яркие минималистичные SVG иконки */
 .icon {
     display: inline-flex;
     align-items: center;
@@ -7,78 +7,130 @@
     height: 24px;
     fill: currentColor;
     transition: all 0.3s ease;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.3));
 }
 
 .icon--large {
     width: 48px;
     height: 48px;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.4));
 }
 
 .icon--medium {
     width: 32px;
     height: 32px;
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3));
 }
 
 .icon--small {
     width: 20px;
     height: 20px;
+    filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.2));
 }
 
 /* Специфичные стили для разделов */
 .logo-icon .icon {
     width: 28px;
     height: 28px;
-    fill: var(--primary-color);
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
 .advantage-card__icon .icon {
     width: 48px;
     height: 48px;
-    fill: var(--primary-color);
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.5));
 }
 
 .tech-item__icon .icon {
     width: 32px;
     height: 32px;
-    fill: var(--accent-color);
+    fill: var(--accent-secondary);
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
 }
 
 .contact-item__icon .icon {
     width: 24px;
     height: 24px;
-    fill: var(--primary-color);
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.4));
 }
 
 .stat__number .icon {
     width: 32px;
     height: 32px;
-    fill: var(--primary-color);
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
 }
 
-/* Hover эффекты */
+/* Hover эффекты с ярким свечением */
 .advantage-card:hover .icon {
-    fill: var(--accent-color);
-    transform: scale(1.1);
+    fill: var(--accent-secondary);
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.8));
 }
 
 .tech-item:hover .icon {
-    fill: var(--primary-color);
-    transform: scale(1.1);
+    fill: var(--accent-primary);
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
 }
 
 .contact-item:hover .icon {
-    fill: var(--accent-color);
-    transform: scale(1.1);
+    fill: var(--accent-secondary);
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.8));
 }
 
 /* Анимации */
 @keyframes iconPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%, 100% { 
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+    }
+    50% { 
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
+    }
+}
+
+@keyframes iconGlow {
+    0%, 100% { 
+        filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+    }
+    50% { 
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 1));
+    }
 }
 
 .icon--animated {
     animation: iconPulse 2s ease-in-out infinite;
+}
+
+.icon--glow {
+    animation: iconGlow 3s ease-in-out infinite;
+}
+
+/* Специальные яркие эффекты */
+.hero .icon {
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
+}
+
+.service-card .icon {
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
+}
+
+.portfolio-item .icon {
+    fill: var(--text-primary);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+.portfolio-item:hover .icon {
+    fill: var(--accent-primary);
+    filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.8));
 }
 
 /* Адаптивность */
@@ -86,10 +138,26 @@
     .advantage-card__icon .icon {
         width: 40px;
         height: 40px;
+        filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
     }
     
     .tech-item__icon .icon {
         width: 28px;
         height: 28px;
+        filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.4));
     }
+    
+    .hero .icon {
+        filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.7));
+    }
+}
+
+/* Дополнительные яркие эффекты для важных элементов */
+.btn .icon {
+    fill: currentColor;
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.4));
+}
+
+.btn:hover .icon {
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
 } 
