@@ -757,6 +757,90 @@ formStyles.textContent = `
 `;
 document.head.appendChild(formStyles);
 
+// Custom Select Implementation
+function createCustomSelect() {
+    const selectElement = document.getElementById('service');
+    if (!selectElement) return;
+
+    // Создаем контейнер для кастомного select
+    const customSelectContainer = document.createElement('div');
+    customSelectContainer.className = 'custom-select-container';
+    
+    // Создаем кнопку для отображения выбранного значения
+    const customSelectButton = document.createElement('div');
+    customSelectButton.className = 'custom-select-button';
+    customSelectButton.innerHTML = '<span>Выберите услугу</span><div class="custom-select-arrow"></div>';
+    
+    // Создаем выпадающий список
+    const customSelectDropdown = document.createElement('div');
+    customSelectDropdown.className = 'custom-select-dropdown';
+    
+    // Заполняем выпадающий список опциями
+    Array.from(selectElement.options).forEach((option, index) => {
+        if (index === 0) return; // Пропускаем placeholder
+        
+        const dropdownItem = document.createElement('div');
+        dropdownItem.className = 'custom-select-item';
+        dropdownItem.textContent = option.textContent;
+        dropdownItem.dataset.value = option.value;
+        
+        dropdownItem.addEventListener('click', () => {
+            // Обновляем выбранное значение
+            customSelectButton.querySelector('span').textContent = option.textContent;
+            selectElement.value = option.value;
+            
+            // Скрываем dropdown
+            customSelectDropdown.classList.remove('open');
+            customSelectContainer.classList.remove('open');
+            
+            // Убираем активный класс со всех элементов
+            document.querySelectorAll('.custom-select-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Добавляем активный класс к выбранному элементу  
+            dropdownItem.classList.add('selected');
+        });
+        
+        customSelectDropdown.appendChild(dropdownItem);
+    });
+    
+    // Обработчик клика по кнопке
+    customSelectButton.addEventListener('click', () => {
+        const isOpen = customSelectContainer.classList.contains('open');
+        
+        // Закрываем все другие открытые dropdown
+        document.querySelectorAll('.custom-select-container').forEach(container => {
+            container.classList.remove('open');
+            container.querySelector('.custom-select-dropdown').classList.remove('open');
+        });
+        
+        if (!isOpen) {
+            customSelectContainer.classList.add('open');
+            customSelectDropdown.classList.add('open');
+        }
+    });
+    
+    // Закрытие при клике вне элемента
+    document.addEventListener('click', (e) => {
+        if (!customSelectContainer.contains(e.target)) {
+            customSelectContainer.classList.remove('open');
+            customSelectDropdown.classList.remove('open');
+        }
+    });
+    
+    // Собираем компонент
+    customSelectContainer.appendChild(customSelectButton);
+    customSelectContainer.appendChild(customSelectDropdown);
+    
+    // Заменяем оригинальный select
+    selectElement.style.display = 'none';
+    selectElement.parentNode.appendChild(customSelectContainer);
+}
+
+// Инициализация при загрузке DOM
+document.addEventListener('DOMContentLoaded', createCustomSelect);
+
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initAdvancedFormHandling);
